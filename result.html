@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .result-container {
+            width: 60%;
+            max-width: 800px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+
+        span {
+            font-weight: bold;
+            color: #444;
+        }
+
+        .back-button {
+            display: block;
+            width: 100px;
+            margin: 20px auto;
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #45a049;
+        }
+
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="result-container">
+        <h1><span class="highlight">Congratulations!!!</span></h1>
+
+        <p><strong>Full Name:</strong> <span id="resultName"></span></p>
+        <p><strong>Phone Number:</strong> <span id="resultPhoneNumber"></span></p>
+        <p><strong>Email:</strong> <span id="resultEmail"></span></p>
+        <p><strong>Interested Event:</strong> <span id="resultEvent"></span></p>
+        <p><strong>Participation Type:</strong> <span id="resultParticipation"></span></p>
+        <p><strong>Sources:</strong> <span id="resultSources"></span></p>
+        <p><strong>Detailed Enquiry:</strong> <span id="resultEnquiry"></span></p>
+        <p>See you soon, on 11 <sup>th</sup> October</p>
+
+        <a href="inquiry.html" class="back-button">Back</a>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+
+        document.getElementById('resultName').textContent = urlParams.get('full-name') || "N/A";
+        document.getElementById('resultPhoneNumber').textContent = urlParams.get('phone-number') || "N/A";
+        document.getElementById('resultEmail').textContent = urlParams.get('email') || "N/A";
+        document.getElementById('resultEvent').textContent = urlParams.get('interested-event') || "N/A";
+        document.getElementById('resultParticipation').textContent = urlParams.get('participation-type') || "N/A";
+
+        const sources = urlParams.getAll('source').join(', ') || "N/A";
+        document.getElementById('resultSources').textContent = sources;
+
+        document.getElementById('resultEnquiry').textContent = urlParams.get('detailed-enquiry') || "N/A";
+    </script>
+</body>
+
+</html>

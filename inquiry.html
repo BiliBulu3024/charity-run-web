@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Enquiry Form</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Sixtyfour+Convergence&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        header {
+            font-family: 'Titillium Web', sans-serif;
+            margin: 0;
+            padding: 10px;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        footer {
+            font-family: 'Titillium Web', sans-serif;
+            display: block;
+            background-color: rgb(66, 78, 78);
+            color: #ffff;
+            padding: 10px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0px;
+        }
+
+        nav {
+            background-color: rgb(66, 78, 78);
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 30px;
+        }
+
+        nav a {
+            color: #ffd154;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 10px;
+            width: 20%;
+            text-align: center;
+            transition: color 0.3s ease, background-color 0.3s ease;
+            border-right: 1px solid #555;
+        }
+
+        nav a:hover {
+            color: #FF6347;
+        }
+
+        nav a.active {
+            color: red;
+        }
+
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                width: 100%;
+                border-bottom: 1px solid #555;
+            }
+
+        }
+
+        .form-container {
+            width: 600px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            box-shadow: 0 0 10px #ddd;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        .form-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="reset"] {
+            background-color: #f44336;
+        }
+    </style>
+</head>
+
+<body>
+    <header style="background-image: url('header_backround.jpg'); background-size: cover; height: 400px;">
+        <h1 style="color: rgb(0, 0, 0); text-align: center">
+            <img src="Charity_Run_logo.png" alt="Charity Run Logo" style="max-width: 200px; height: auto;"
+                onclick="window.location.href='index.html'" />
+        </h1>
+        <h1
+            style="font-family: 'Sixtyfour Convergence', sans-serif; font-size: 40px; line-height: 1.5; text-align: center;">
+            Event Enquiry Form
+        </h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="in.html">Home</a>
+        <a href="program.html">Program Events</a>
+        <a href="general-info.html">General Information</a>
+        <a href="participation.html">Participation Information</a>
+        <a href="about-us.html">About Us</a>
+        <a href="inquiry.html">Inquiry</a>
+    </nav>
+
+    <div class="form-container">
+        <h2>Event Enquiry Form</h2>
+        <form id="enquiryForm" action="result.html" method="GET" onsubmit="return validateForm()">
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" name="full-name">
+
+            <label for="phone-number">Phone Number:</label>
+            <input type="number" id="phone-number" name="phone-number">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="interested-event">Interested Event:</label>
+            <select id="interested-event" name="interested-event">
+                <option value="">Select Your Interested Event</option>
+                <option value="Charity Run 2024">Charity Run 2024</option>
+            </select>
+
+            <label for="participation-type">Participation Type:</label>
+            <select id="participation-type" name="participation-type">
+                <option value="">Select Participation Type</option>
+                <option value="Runner">Runner</option>
+                <option value="Volunteer">Volunteer</option>
+                <option value="Sponsor">Sponsor</option>
+                <option value="Renting space">Renting space</option>
+            </select>
+
+            <label>Where do you know us?</label>
+            <label><input type="checkbox" name="source" value="YouTube">YouTube</label>
+            <label><input type="checkbox" name="source" value="Facebook">Facebook</label>
+            <label><input type="checkbox" name="source" value="Social Media">Social Media</label>
+            <label><input type="checkbox" name="source" value="Website">Website</label>
+            <label><input type="checkbox" name="source" value="Friends">Friends</label>
+            <label><input type="checkbox" name="source" value="Others">Others</label>
+
+            <label for="detailed-enquiry">Detailed Enquiry:</label>
+            <textarea id="detailed-enquiry" name="detailed-enquiry"></textarea>
+
+            <div class="form-buttons">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <p style="text-align: center;">&copy; 2024 Charity Run. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function validateForm() {
+            const requiredFields = ['full-name', 'email', 'interested-event', 'participation-type'];
+            for (let field of requiredFields) {
+                if (document.getElementById(field).value === "") {
+                    alert("Please fill in all required fields.");
+                    return false;
+                }
+            }
+            return true;
+        }
+    </script>
+</body>
+
+</html>

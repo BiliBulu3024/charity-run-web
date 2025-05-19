@@ -1,0 +1,375 @@
+
+    header {
+        font-family: 'Titillium Web', sans-serif;
+        margin: 0;
+        padding: 10px;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    footer {
+        font-family: 'Titillium Web', sans-serif;
+        display: block;
+        background-color: rgb(66, 78, 78);
+        color: #ffff;
+        padding: 20px;
+    }
+
+    body {
+        font-family: 'Titillium Web', sans-serif;
+        margin: 0;
+        line-height: 1.5;
+    }
+
+    nav {
+        background-color: rgb(66, 78, 78);
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 30px;
+    }
+
+    nav a {
+        color: #ffd154;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 0 10px;
+        width: 20%;
+        text-align: center;
+        transition: color 0.3s ease, background-color 0.3s ease;
+        border-right: 1px solid #555;
+    }
+
+    nav a:hover {
+        color: #FF6347;
+    }
+
+    nav a.active {
+        color: red;
+    } 
+
+    @media (max-width: 768px) {
+        nav {
+            flex-direction: column;
+        }
+
+        nav a {
+            width: 100%;
+            border-bottom: 1px solid #555;
+        }
+    }
+
+    table {
+        width: 100%;
+        margin-bottom: 20px;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        border: 1px solid black;
+        padding: 10px;
+    }
+
+    th {
+        background-color: #c4c4c4;
+    }
+
+    .large-img {
+        max-width: 400px;
+        height: 200px;
+    }
+
+    .small-img {
+        max-width: 200px;
+        height: 200px;
+    }
+
+    .highlight {
+        color: red;
+        font-weight: bold;
+    }
+
+    #backToTop {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background-color: #5a5e62;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        display: none;
+        transition: opacity 0.3s;
+    }
+
+    #backToTop:hover {
+        background-color: #0056b3;
+    }
+    /* Biểu tượng trợ giúp */
+.help-symbol {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: grab;
+    font-size: 24px;
+}
+
+.help-symbol:active {
+    cursor: grabbing;
+}
+
+.close-symbol {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.help-symbol:hover {
+    background-color: #45a049;
+}
+
+/* Thông báo hỗ trợ */
+.help-message {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    font-size: 16px;
+    display: none;
+}
+
+.help-message.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Chatbox */
+.chatbox {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 300px;
+    max-height: 400px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chatbox-header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+.chatbox-body {
+    padding: 10px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.chatbox-body p {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.chatbox-body .user-message {
+    background-color: #e1f5e1;
+    text-align: right;
+}
+
+.chatbox-body .bot-message {
+    background-color: #f1f1f1;
+    text-align: left;
+}
+
+.chatbox-footer {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.chatbox-footer input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 5px;
+    box-sizing: border-box;
+}
+
+.chatbox-footer button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.chatbox-footer button:hover {
+    background-color: #45a049;
+}
+
+/* Giao diện quản lý Admin */
+.admin-chatbox {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.admin-chatbox-header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.admin-chatbox-body {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+}
+
+.admin-chatbox-footer {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.admin-chatbox-footer input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.admin-chatbox-footer button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.admin-chatbox-footer button:hover {
+    background-color: #45a049;
+}
+/*   <!-- Thông báo hỗ trợ -->
+  <div class="help-message" id="helpMessage">Tôi có thể giúp gì cho bạn?</div>
+
+  <!-- Biểu tượng trợ giúp -->
+  <div class="help-symbol" id="helpSymbol">
+      <span>?</span>
+      <button class="close-symbol" id="closeSymbol">X</button>
+  </div>
+
+  <!-- Chatbox -->
+  <div class="chatbox" id="chatbox">
+    <div class="chatbox-header" id="chatboxHeader">Chat hỗ trợ</div>
+    <div class="chatbox-body" id="chatboxBody">
+        <p class="bot-message"><strong>Admin:</strong> Chào bạn! Tôi có thể giúp gì cho bạn?</p>
+    </div>
+    <div class="chatbox-footer">
+        <input type="text" id="userInput" placeholder="Nhập tin nhắn...">
+        <button id="sendMessage">Gửi</button>
+    </div>
+</div>
+
+  <script src="style.css"></script> 
+
+    <script>
+   // Lấy các phần tử cần thiết
+const helpMessage = document.getElementById('helpMessage');
+const helpSymbol = document.getElementById('helpSymbol');
+const closeSymbol = document.getElementById('closeSymbol');
+const chatbox = document.getElementById('chatbox');
+const chatboxBody = document.getElementById('chatboxBody');
+const userInput = document.getElementById('userInput');
+const sendMessage = document.getElementById('sendMessage');
+
+// Hiển thị thông báo khi mở trang
+window.onload = function () {
+    helpMessage.classList.add('show'); // Hiển thị thông báo
+    setTimeout(() => {
+        helpMessage.classList.remove('show'); // Ẩn thông báo sau 5 giây
+    }, 5000);
+};
+
+// Tắt biểu tượng trợ giúp
+closeSymbol.addEventListener('click', () => {
+    helpSymbol.style.display = 'none';
+});
+
+// Mở/đóng chatbox
+helpSymbol.addEventListener('click', () => {
+    chatbox.style.display = chatbox.style.display === 'flex' ? 'none' : 'flex';
+});
+
+// Gửi tin nhắn
+sendMessage.addEventListener('click', () => {
+    const message = userInput.value.trim();
+    if (message) {
+        chatboxBody.innerHTML += `<p class="user-message"><strong>User:</strong> ${message}</p>`;
+        setTimeout(() => {
+            chatboxBody.innerHTML += `<p class="bot-message"><strong>Admin:</strong> Xin vui lòng chờ trong giây lát. Tôi sẽ kết nối bạn với nhân viên! </p>`;
+            chatboxBody.scrollTop = chatboxBody.scrollHeight;
+        }, 500);
+        userInput.value = '';
+    }
+});
+    </script> */

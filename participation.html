@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charity Run 2024 - General Information</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Sixtyfour+Convergence&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <style>
+        header {
+            font-family: 'Titillium Web', sans-serif;
+            margin: 0;
+            padding: 10px;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        footer {
+            font-family: 'Titillium Web', sans-serif;
+            display: block;
+            background-color: rgb(66, 78, 78);
+            color: #ffff;
+            padding: 10px;
+        }
+
+        body {
+            font-family: 'Titillium Web', sans-serif;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        nav {
+            background-color: rgb(66, 78, 78);
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 30px;
+        }
+
+        nav a {
+            color: #ffd154;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 10px;
+            width: 20%;
+            text-align: center;
+            transition: color 0.3s ease, background-color 0.3s ease;
+            border-right: 1px solid #555;
+        }
+
+        nav a:hover {
+            color: #FF6347;
+        }
+
+        nav a.active {
+            color: red;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                width: 100%;
+                border-bottom: 1px solid #555;
+            }
+
+        }
+
+        table {
+            width: 100%;
+            margin-bottom: 20px;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #c4c4c4;
+        }
+
+        .large-img {
+            max-width: 400px;
+            height: 200px;
+        }
+
+        .small-img {
+            max-width: 200px;
+            height: 200px;
+        }
+
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+
+        #backToTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #5a5e62;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            display: none;
+            transition: opacity 0.3s;
+        }
+
+        #backToTop:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+<body>
+    <header style=" background-image: url('header_backround.jpg'); background-size: cover; height: 400px;">
+        <h1 style="color: rgb(0, 0, 0); text-align: center">
+            <img src="Charity_Run_logo.png" alt="Charity Run Logo"
+                style="max-width: 200px; height: auto; align-items: center;"
+                onclick="window.location.href='index.html'" />
+        </h1>
+        <h1
+            style=" font-family: 'Sixtyfour Convergence', sans-serif; font-size: 40px; line-height: 1.5; text-align: center;">
+            Participation
+        </h1>
+        <br>
+    </header>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="program.html">Program Events</a>
+        <a href="general-info.html">General Information</a>
+        <a href="participation.html">Participation Information</a>
+        <a href="about-us.html">About Us</a>
+        <a href="inquiry.html">Inquiry</a>
+    </nav>
+    <div style="margin: 20px;">
+        <div class="participate">
+            <h2>I. How to Participate</h2>
+            <p>You can participate in the charity run in the following ways:</p>
+
+            <h3>1. As a Runner</h3>
+            <div style="display: flex; align-items: center;">
+                <div style="flex: 1; padding-right: 20px;">
+                    <h4>Registration:</h4>
+                    <ul>
+                        <li><strong>Visit the official website:</strong> Fill in your personal information on the online
+                            registration form.</li>
+                        <li><strong>Registration Confirmation:</strong> After completing the registration, you will
+                            receive a confirmation email.</li>
+                    </ul>
+                    <h4>Participation Fee:</h4>
+                    <ul>
+                        <li><strong>Free:</strong> If registered from August 15 to August 20.</li>
+                        <li><strong>$25:</strong> If registered from August 21 to October 10. This amount will be
+                            allocated to charity fundraising.</li>
+                    </ul>
+                    <h4>Running Distances:</h4>
+                    <ul>
+                        <li><strong>Distances:</strong> The run will feature different distances, ranging from 5km to
+                            10km. You can choose the distance that suits your ability when registering.</li>
+                        <li><strong>Route Map:</strong> Detailed information about the route will be provided via email
+                            before the event.</li>
+                    </ul>
+                    <h4>Race Day:</h4>
+                    <ul>
+                        <li><strong>Time:</strong> Please arrive at least 30 minutes before the start time to complete
+                            the check-in and warm-up.</li>
+                        <li><strong>Location:</strong> Detailed information about the location will be sent in the
+                            registration confirmation email. Please follow the announcements from the organizing
+                            committee to stay updated.</li>
+                    </ul>
+                    <h4>Gifts:</h4>
+                    <ul>
+                        <li>All runners will receive a commemorative T-shirt and a completion medal after finishing the
+                            run.</li>
+                    </ul>
+                </div>
+                <div> <img src="runner.jpg" alt="A runner" style="max-width: 400px; height: 600px;"></div>
+            </div>
+            <p>
+                What are you waiting for? <strong><a href="inquiry.html"
+                        style="color: #4A90E2; font-weight: bold; margin: 0 10px;"
+                        onmouseover="this.style.color='#FF6347';" onmouseout="this.style.color='#4A90E2';">Register
+                        Now</a></strong>
+            </p>
+
+            <h3>2. As a Volunteer</h3>
+            <h4>Registration:</h4>
+            <ul>
+                <li><strong>Fill out the volunteer registration form:</strong> Visit our website to complete the
+                    volunteer application.</li>
+            </ul>
+            <h4>Necessary Roles:</h4>
+            <ul>
+                <li><strong>Registration Support:</strong> Assist participants in completing the registration process at
+                    the event.</li>
+                <li><strong>Water Stations:</strong> Distribute water to runners at designated stops.</li>
+                <li><strong>Guidance:</strong> Provide participants with information about the route, safety, and other
+                    necessary details.</li>
+            </ul>
+
+            <h4>Training Session:</h4>
+            <ul>
+                <li><strong>Participate in the training session:</strong> All volunteers will attend a mandatory
+                    training session one week before the event to understand their roles and responsibilities.</li>
+            </ul>
+            <p>
+                We are honored to receive your help! <strong><a href="inquiry.html"
+                        style="color: #4A90E2; font-weight: bold; margin: 0 10px;"
+                        onmouseover="this.style.color='#FF6347';" onmouseout="this.style.color='#4A90E2';">Register
+                        Now</a></strong>
+            </p>
+
+            <h3>3. As a Sponsor</h3>
+            <h4>Sponsorship Levels:</h4>
+            <ul>
+                <li><strong>Gold Sponsor:</strong> $5,000
+                    <ul>
+                        <li>Benefits: Logo on all event materials, booth space at the event, and promotional
+                            opportunities through media channels.</li>
+                    </ul>
+                </li>
+                <li><strong>Silver Sponsor:</strong> $3,000
+                    <ul>
+                        <li>Benefits: Logo on event banners, promotional materials, and website.</li>
+                    </ul>
+                </li>
+                <li><strong>Bronze Sponsor:</strong> $1,000
+                    <ul>
+                        <li>Benefits: Recognition in the event program and on the website.</li>
+                    </ul>
+                </li>
+            </ul>
+            <h4>Sponsorship Registration Process:</h4>
+            <ul>
+                <li><strong>Contact Us:</strong> Send an email or call to discuss sponsorship opportunities.</li>
+                <li><strong>Fill out the sponsorship form:</strong> After agreement, fill out the form and send it back
+                    to us.</li>
+                <li><strong>Attend the press conference:</strong> Sponsors will be invited to participate in a press
+                    conference before the event to promote their brand.</li>
+            </ul>
+            <h4>Benefits of Being a Sponsor:</h4>
+            <ul>
+                <li>Enhance brand recognition.</li>
+                <li>Make a positive contribution to the community and fundraise for charitable activities.</li>
+                <li>Opportunities to connect with other businesses and individuals in the community.</li>
+            </ul>
+            <p>
+                We are honored to receive your donate! <strong><a href="inquiry.html"
+                        style="color: #4A90E2; font-weight: bold; margin: 0 10px;"
+                        onmouseover="this.style.color='#FF6347';" onmouseout="this.style.color='#4A90E2';">Contact
+                        Us</a></strong>
+            </p>
+
+        </div>
+
+        <div class="Regulations">
+            <h2>II. Regulations</h2>
+            <h3>1. Attire</h3>
+            <p><strong>Runners:</strong> Wearing sports shoes is mandatory. Attire should be chosen to avoid causing any
+                hindrance during the run.</p>
+            <p><strong>Volunteers:</strong> Must wear the designated t-shirt provided by the organizers for easy
+                identification.</p>
+            <h3>2. Health</h3>
+            <p><strong>Stimulants:</strong> Participants are not allowed to use stimulants before or during the event
+                day. Violating this regulation may result in disqualification.</p>
+
+            <h2>III. Pricing Information</h2>
+            <h3>1. Participation Fee for Runners:</h3>
+            <p><strong>Free:</strong> (August 15 - August 20)</p>
+            <p><strong>25 USD:</strong> (August 21 - October 10) – This amount will be donated to charity.</p>
+            <h3>2. Souvenir Booth:</h3>
+            <p>All products at the souvenir booth feature our logo, and all profits will be donated to charity. Products
+                include:</p> <br>
+
+            <table>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Charity Run 2024 T-Shirt</td>
+                    <td>$10</td>
+                    <td>T-shirt featuring the event logo, comfortable fit.</td>
+                </tr>
+                <tr>
+                    <td>Hand Fan</td>
+                    <td>$5</td>
+                    <td>Lightweight and portable, perfect for hot weather.</td>
+                </tr>
+                <tr>
+                    <td>Face Towel</td>
+                    <td>$5</td>
+                    <td>Soft and absorbent towel for everyday use.</td>
+                </tr>
+                <tr>
+                    <td>Insulated Water Bottle</td>
+                    <td>$15</td>
+                    <td>Keeps drinks hot or cold, with event logo printed.</td>
+                </tr>
+                <tr>
+                    <td>Pair of Socks</td>
+                    <td>$3</td>
+                    <td>Breathable design, featuring the event logo.</td>
+                </tr>
+                <tr>
+                    <td>Sports Shoes</td>
+                    <td>$25</td>
+                    <td>Quality athletic shoes with event logo.</td>
+                </tr>
+                <tr>
+                    <td>Reusable Tote Bag</td>
+                    <td>$12</td>
+                    <td>Eco-friendly tote bag, great for daily use.</td>
+                </tr>
+                <tr>
+                    <td>Wristband</td>
+                    <td>$2</td>
+                    <td>Colorful wristband to show your support for the cause.</td>
+                </tr>
+            </table>
+            <p>Each product carries a special meaning and helps us contribute to charitable activities. Please visit our
+                booth to choose your favorite items and join us in working towards a good cause!</p>
+
+        </div>
+        <div class="Rental Service">
+            <h2>IV. Rental Service Booth</h2>
+            <p>We are excited to announce our booth rental service at this charity event! This is a wonderful
+                opportunity for businesses and individuals to promote their products in a friendly and meaningful
+                environment.</p>
+
+            <h3>Benefits of Participating:</h3>
+            <ul>
+                <li><strong>Enhance Brand Visibility:</strong> Your booth will be located in a prominent area,
+                    attracting the attention of hundreds of event participants.</li>
+                <li><strong>Connect with New Customers:</strong> This is an opportunity for you to showcase your
+                    products directly to customers, fostering engagement and building relationships.</li>
+                <li><strong>Support Charitable Fundraising:</strong> Every product you sell not only generates profit
+                    for you but also contributes to the charity fund, helping those in need.</li>
+            </ul>
+
+            <h3>Service Details:</h3>
+            <ul>
+                <li><strong>Space and Equipment:</strong> We provide ample space along with essential equipment such as
+                    tables, chairs, and promotional banners.</li>
+                <li><strong>Pricing:</strong> $900 per booth, which includes all necessary amenities and support.</li>
+                <li><strong>Product Promotion:</strong> Your products will be featured on the event's media channels,
+                    increasing your reach and brand recognition.</li>
+            </ul>
+
+            <p>Please contact us today for more details and to reserve your booth space! Together, we can create an
+                event that is not only successful but also meaningful!</p>
+
+        </div>
+        <p><a href="index.html">Back to Home</a></p>
+
+    </div>
+    <button id="backToTop">⬆️ backToTop</button>
+    <footer>
+        <p style="text-align: center;">&copy; 2024 Charity Run. All rights reserved.</p>
+    </footer>
+    <script>
+        // Highlight the current page link
+        const currentLocation = window.location.pathname.split("/").pop();
+        document.querySelectorAll('nav a').forEach(item => {
+            if (item.getAttribute('href') === currentLocation) {
+                item.classList.add('active');
+            }
+        });
+    </script>
+    <script>
+        const backToTopButton = document.getElementById('backToTop');
+        window.onscroll = function () {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        };
+
+        backToTopButton.addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+
+</html>

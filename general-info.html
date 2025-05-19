@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charity Run 2024 - General Information</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Sixtyfour+Convergence&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+    rel="stylesheet">
+  <style>
+    header {
+      font-family: 'Titillium Web', sans-serif;
+      margin: 0;
+      padding: 10px;
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    footer {
+      font-family: 'Titillium Web', sans-serif;
+      display: block;
+      background-color: rgb(66, 78, 78);
+      color: #ffff;
+      padding: 10px;
+    }
+
+    body {
+      font-family: 'Titillium Web', sans-serif;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    nav {
+      background-color: rgb(66, 78, 78);
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: 30px;
+    }
+
+    nav a {
+      color: #ffd154;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 10px;
+      width: 20%;
+      text-align: center;
+      transition: color 0.3s ease, background-color 0.3s ease;
+      border-right: 1px solid #555;
+    }
+
+    nav a:hover {
+      color: #FF6347;
+    }
+
+    nav a.active {
+      color: red;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+      }
+
+      nav a {
+        width: 100%;
+        border-bottom: 1px solid #555;
+      }
+
+    }
+
+    table {
+      width: 100%;
+      margin-bottom: 20px;
+      border-collapse: collapse;
+    }
+
+    td {
+      border: 1px solid black;
+      padding: 10px;
+      width: 50%;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 15px;
+      word-wrap: break-word;
+    }
+
+    .large-img {
+      max-width: 400px;
+      height: 200px;
+    }
+
+    .small-img {
+      max-width: 200px;
+      height: 200px;
+    }
+
+    .highlight {
+      color: red;
+      font-weight: bold;
+    }
+
+    .zoom {
+      display: block;
+      margin: 0 auto;
+      overflow: hidden;
+      width: 600px;
+      height: 450px;
+      border: 0;
+      transition: transform 0.3s ease;
+    }
+
+    .zoom:hover {
+      transform: scale(2.0);
+    }
+
+    #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #5a5e62;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      display: none;
+      transition: opacity 0.3s;
+    }
+
+    #backToTop:hover {
+      background-color: #0056b3;
+    }
+  </style>
+
+<body>
+  <!-- header -->
+  <header style=" background-image: url('header_backround.jpg'); background-size: cover; height: 400px;">
+    <h1 style="color: rgb(0, 0, 0); text-align: center">
+      <img src="Charity_Run_logo.png" alt="Charity Run Logo"
+        style="max-width: 200px; height: auto; align-items: center;" onclick="window.location.href='index.html'" />
+    </h1>
+    <h1
+      style=" font-family: 'Sixtyfour Convergence', sans-serif; font-size: 40px; line-height: 1.5; text-align: center;">
+      General Information
+    </h1>
+    <br>
+  </header>
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="program.html">Program Events</a>
+    <a href="general-info.html">General Information</a>
+    <a href="participation.html">Participation Information</a>
+    <a href="about-us.html">About Us</a>
+    <a href="inquiry.html">Inquiry</a>
+  </nav>
+
+  <div style="margin: 20px">
+    <div class="Event Venue">
+      <h2 style="font-size: 32px;">I. Event Venue</h2>
+      <ol>
+        <li><strong style="font-size: 20px;">Location:</strong> Saigon Exhibition and Convention Center(SECC)</li>
+        <li><strong style="font-size: 20px;">Adress:</strong> 799 Nguyễn Văn Linh, Tân Phú, Quận 7,TP.HCM, Việt Nam</li>
+        <li><strong style="font-size: 20px;">Date:</strong> 11<sup>th</sup> October</li>
+        <li><strong style="font-size: 20px;">Time:</strong> 7:00 AM - 12:00 PM</li>
+      </ol>
+    </div>
+
+    <div class="How to Get to SECC">
+      <div style="display: flex; align-items: center">
+        <div style="flex: 1; padding-right: 20px">
+          <h2 style="font-size: 32px;">
+            II. How to Get to SECC (Saigon Exhibition and Convention Center)
+          </h2>
+          <ol>
+            <h3 style="font-size: 20px;">
+              <li>By Car</li>
+            </h3>
+            <ul>
+              <li>From the City Center: Head towards Khanh Hoi Bridge, then turn onto Nguyen Tat Thanh Street.</li>
+              <li>Continue straight to Nguyen Van Linh Street and turn left onto Ton Duc Thang Street.</li>
+              <li>SECC will be on your right.</li>
+            </ul>
+
+            <h3 style="font-size: 20px;">
+              <li>By Bus</li>
+            </h3>
+            <ul>
+              <li>Use bus lines such as 35, 36, or 150.</li>
+              <li>Get off at the nearest stop and walk about 5-10 minutes to SECC.</li>
+            </ul>
+
+            <h3 style="font-size: 20px;">
+              <li>By Taxi</li>
+            </h3>
+            <ul>
+              <li>Call a taxi or use ride-sharing services like Grab.</li>
+              <li>Enter "SECC, District 7" into the app to be taken directly there.</li>
+            </ul>
+
+            <h3 style="font-size: 20px;">
+              <li>By Bicycle or Walking</li>
+            </h3>
+            <ul>
+              <li>If you are nearby, you can ride a bicycle or walk.</li>
+              <li>SECC has pathways and bike parking areas available.</li>
+            </ul>
+            <br>
+          </ol>
+        </div>
+        <div>
+          <img src="SECC.jpg" alt="Over view of SECC" style="max-width: 600px; height: 500px" />
+        </div>
+      </div>
+
+      <div class="zoom">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26371.284571611573!2d106.71272392302608!3d10.725619960141088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f884b977323%3A0x12bab2d8a70949ca!2zVHJ1bmcgdMOibSBI4buZaSBjaOG7oyB2w6AgVHJp4buDbiBsw6NtIFPDoGkgR8Oybg!5e0!3m2!1svi!2s!4v1729601319013!5m2!1svi!2s"
+          width="600" height="450" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+
+
+
+      <ol style="background-color: rgb(168, 165, 165); padding: 5px">
+        <h3 class="highlight">NOTE:</h3>
+        <ul>
+          <li>Check traffic conditions before you go to avoid congestion.</li>
+          <li>
+            If it's during a major event, arrive early to secure convenient parking and easier access.</li>
+        </ul>
+      </ol>
+    </div>
+
+    <div class="Packing facilities,">
+      <h2 style="font-size: 32px;">III. Packing facilities</h2>
+      <ul>
+        <li> The SECC offers free parking for participants and visitors, but the number is limited.</li>
+        <li>If you run out of parking at SECC, you can park at the mall nextdoor, with parking fees depending on the
+          type of vehicle.</li>
+        <li>We encourage you to arrive early for free parking at SECC!</li>
+      </ul>
+    </div>
+    <div class="Special Entitlements for Participants.">
+      <h2 style="font-size: 32px;">IV. Special Entitlements for Participants</h2>
+      <ul>
+        <li>
+          <strong style="font-size: 20px;">Commemorative T-Shirt:</strong> All participants will receive a free
+          commemorative t-shirt, marking your participation in this meaningful event.
+        </li>
+        <li><strong style="font-size: 20px;">Participation Certificate:</strong> If you are a student, you will receive
+          a volunteer stamp on your participation certificate. This is a bonus for your CV when applying for jobs in the
+          future.</li>
+        <li><strong style="font-size: 20px;">Free Goodie Bag:</strong> Participants will receive a bag containing health
+          products, snacks, and useful nutritional information.</li>
+        <li><strong style="font-size: 20px;">Discounts at Food Stalls:</strong> Participants will enjoy special
+          discounts at food stalls during the event.</li>
+        <li><strong style="font-size: 20px;">Join Recreational Activities:</strong> You can participate in various free
+          recreational and sports activities within the event area, including games and competitions.</li>
+      </ul>
+    </div>
+
+    <div class="Participants, Partners, and Sponsors">
+      <h2 style="font-size: 32px;">V. Information About Participants, Partners, and Sponsors</h2>
+      <ol>
+        <h3>
+          <li style="font-size: 28px;">Participants</li>
+        </h3>
+        <p>The event is expected to attract thousands of participants,including:</p>
+        <ul>
+          <li>Individuals who love sports and health.</li>
+          <li>Students from universities and colleges.</li>
+          <li>Families with children.</li>
+        </ul>
+
+        <h3>
+          <li style="font-size: 28px;">Partners</li>
+        </h3>
+        <h4>Non-Profit Organizations</h4>
+        <p> We collaborate with local non-profit organizations to support and develop the community. The partnership
+          with these organizations is invaluable in carrying out meaningful programs and activities.</p>
+        <h4>Universities</h4>
+        <p> Universities will support the event and encourage student participation. We sincerely thank our educational
+          partners for their important role in connecting and spreading community values.</p>
+        <h3>
+          <li style="font-size: 28px;">Sponsors</li>
+        </h3>
+        <p style="font-size: 20px;"> We would like to sincerely thank the sponsors who have supported us in the Charity
+          Run 2024 event. Your support not only helps us organize this event but also provides an opportunity to assist
+          the villagers of Nủ in rebuilding their lives after the disaster.</p>
+      </ol>
+      <table>
+        <tr>
+          <td><img src="TPBank.jpg" alt="TPBank Logo" class="small-img"></td>
+          <td><strong>TP Bank:</strong> As one of the leading banks in Vietnam, TP Bank is committed to supporting
+            community activities and sustainable development. The partnership with TP Bank in this event reflects the
+            bank's social responsibility and spirit of compassion <br /><a href="https://tpb.vn/"
+              target="_blank">TPBank</a></td>
+        </tr>
+
+        <tr>
+          <td><strong>Pepsi:</strong> With a mission to bring joy and refreshment to everyone, Pepsi proudly serves as
+            the main sponsor of Charity Run 2024. Pepsi not only provides beverages for the event but also participates
+            in activities that promote an active and healthy lifestyle.<br /><a href="https://www.pepsi.com/"
+              target="_blank">Pepsi</a></td>
+          <td><img src="Pepsi.jpg" alt="Pepsi Logo" class="small-img"></td>
+        </tr>
+
+        <tr>
+          <td><img src="Herbalife.jpg" alt="Herbalife Logo" class="large-img"></td>
+          <td><strong>Herbalife:</strong> Herbalife is a leading brand in nutrition and health. Herbalife's support
+            helps us provide information and nutritional products to participants, aiming to enhance health and fitness
+            within the community.<br /><a href="https://www.herbalife.com/vi-vn" target="_blank">Herbalife</a></td>
+        </tr>
+      </table>
+    </div>
+
+    <p><a href="index.html">Back to Home</a></p>
+  </div>
+  <button id="backToTop">⬆️ backToTop</button>
+  <footer>
+    <p style="text-align: center;">&copy; 2024 Charity Run. All rights reserved.</p>
+  </footer>
+  <script>
+    // Highlight the current page link
+    const currentLocation = window.location.pathname.split("/").pop();
+    document.querySelectorAll('nav a').forEach(item => {
+      if (item.getAttribute('href') === currentLocation) {
+        item.classList.add('active');
+      }
+    });
+  </script>
+  <script>
+    const backToTopButton = document.getElementById('backToTop');
+    window.onscroll = function () {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        backToTopButton.style.display = 'block';
+      } else {
+        backToTopButton.style.display = 'none';
+      }
+    };
+
+    backToTopButton.addEventListener('click', function () {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Charity Run 2024 - Program Events</title>
+    <!-- Link to Google Fonts for custom typography -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Sixtyfour+Convergence&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <style>
+        header {
+            font-family: 'Titillium Web', sans-serif;
+            margin: 0;
+            padding: 10px;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        footer {
+            font-family: 'Titillium Web', sans-serif;
+            display: block;
+            background-color: rgb(66, 78, 78);
+            color: #ffff;
+            padding: 10px;
+        }
+
+        body {
+            font-family: 'Titillium Web', sans-serif;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        nav {
+            background-color: rgb(66, 78, 78);
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 30px;
+        }
+
+        nav a {
+            color: #ffd154;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 10px;
+            width: 20%;
+            text-align: center;
+            transition: color 0.3s ease, background-color 0.3s ease;
+            border-right: 1px solid #555;
+        }
+
+        nav a:hover {
+            color: #FF6347;
+        }
+
+        nav a.active {
+            color: red;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                width: 100%;
+                border-bottom: 1px solid #555;
+            }
+
+        }
+
+        table {
+            width: 100%;
+            margin-bottom: 20px;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #c4c4c4;
+        }
+
+        .large-img {
+            max-width: 400px;
+            height: 200px;
+        }
+
+        .small-img {
+            max-width: 200px;
+            height: 200px;
+        }
+
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+
+        #backToTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #5a5e62;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            display: none;
+            transition: opacity 0.3s;
+        }
+
+        #backToTop:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+<body>
+    <header style=" background-image: url('header_backround.jpg'); background-size: cover; height: 400px;">
+        <h1 style="color: rgb(0, 0, 0); text-align: center">
+            <img src="Charity_Run_logo.png" alt="Charity Run Logo"
+                style="max-width: 200px; height: auto; align-items: center;"
+                onclick="window.location.href='index.html'" />
+        </h1>
+        <h1
+            style=" font-family: 'Sixtyfour Convergence', sans-serif; font-size: 40px; line-height: 1.5; text-align: center;">
+            Program Events
+        </h1>
+        <br>
+    </header>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="program.html">Program Events</a>
+        <a href="general-info.html">General Information</a>
+        <a href="participation.html">Participation Information</a>
+        <a href="about-us.html">About Us</a>
+        <a href="inquiry.html">Inquiry</a>
+    </nav>
+
+    <div style="margin: 20px;">
+        <div class="event-overview">
+            <h2>I. Event Overview</h2>
+
+            <div class="event-details" style="margin-top: 20px; line-height: 1.8;">
+                <p><strong>Event Name:</strong> Charity Run 2024</p>
+                <p><strong>Theme:</strong><b> "Run for Love - Run for Rebuild"</b></p>
+                <p><strong>Date:</strong> October 11th, 2024</p>
+                <p><strong>Location:</strong> Saigon Exhibition and Convention Center - SECC, Hochiminh City</p>
+                <p><strong>Time:</strong> 7:00 AM - 12:00 PM</p>
+            </div>
+
+            <p>We look forward to seeing you at the <span class="highlight">Charity Run 2024</span>!<a
+                    href="inquiry.html" style="color: #4A90E2; font-weight: bold; margin: 0 10px;"
+                    onmouseover="this.style.color='#FF6347';" onmouseout="this.style.color='#4A90E2';">Join us</a> for a
+                morning of fitness, fun, and making a positive impact in the community.</p>
+        </div>
+        <div class="Activities">
+            <h2>II. Activities </h2>
+            <div class="event-details-main activities" style="margin-top: 20px; line-height: 1.8;">
+                <h3>Below are the main activities for Charity Run 2024:</h3>
+                <ol>
+                    <li>Opening Ceremony</li>
+                    <li>5KM Charity Run</li>
+                    <li>10KM Charity Run</li>
+                    <li>Closing Ceremony</li>
+                </ol>
+            </div>
+            <div class="event-details-Timeline of Activities" style="margin-top: 20px; line-height: 1.8;">
+                <h3> Timeline of Activities</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Activity</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>7:00 AM</td>
+                            <td><strong>Registration and Welcome</strong></td>
+                            <td>Check-in for participants, distribution of race kits, and welcome refreshments.</td>
+                        </tr>
+                        <tr>
+                            <td>8:00 AM</td>
+                            <td><strong>Warm-Up Session</strong></td>
+                            <td>Led by professional trainers; a fun and engaging warm-up to get participants energized.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>8:30 AM</td>
+                            <td><strong>Opening Ceremony</strong></td>
+                            <td>Welcome speech by organizers, sharing the story of Nũ village and the impact of Typhoon
+                                Yagi.</td>
+                        </tr>
+                        <tr>
+                            <td>8:45 AM</td>
+                            <td><strong>Race Start</strong></td>
+                            <td>Two categories: 5km Fun Run and 10km Competitive Run.</td>
+                        </tr>
+                        <tr>
+                            <td>10:00 AM</td>
+                            <td><strong>Post-Race Activities</strong></td>
+                            <td>Refreshments available, relaxation area, and entertainment.</td>
+                        </tr>
+                        <tr>
+                            <td>10:30 AM</td>
+                            <td><strong>Guest Speaker Session</strong></td>
+                            <td>Inspirational talk by a local hero or celebrity about resilience and community support.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>11:00 AM</td>
+                            <td><strong>Award Ceremony</strong></td>
+                            <td>Recognizing top finishers in each category, along with special awards for fundraising
+                                efforts.</td>
+                        </tr>
+                        <tr>
+                            <td>11:30 AM</td>
+                            <td><strong>Closing Remarks</strong></td>
+                            <td>Thanking participants, sponsors, and volunteers for their support and announcing total
+                                funds raised.</td>
+                        </tr>
+                        <tr>
+                            <td>12:00 PM</td>
+                            <td><strong>Event Conclusion</strong></td>
+                            <td>Participants encouraged to stay for networking and community engagement activities.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="Activites During Event">
+            <h2>III. Activites During the Event</h2>
+
+            <div class="Activites During Event-details">
+                <ol>
+                    <h3>
+                        <li>Health and Wellness Booth</li>
+                    </h3>
+                    <ul>
+                        <li>Provides information on nutrition, fitness, and health resources available to all
+                            participants.</li>
+                        <li><strong>BMI Measurement:</strong> Participants will receive a free Body Mass Index (BMI)
+                            measurement to monitor their health status.</li>
+                    </ul>
+                    <h3>
+                        <li>Children's Zone</li>
+                    </h3>
+                    <ul>
+                        <li>Fun activities for children, including games, face painting, and a mini obstacle course,
+                            ensuring a safe and enjoyable experience for kids.</li>
+                    </ul>
+                    <h3>
+                        <li>Food Stalls</li>
+                    </h3>
+                    <ul>
+                        <li>A variety of local and healthy food options available for purchase, with proceeds going
+                            towards fundraising efforts.</li>
+                    </ul>
+                    <h3>
+                        <li>Clothing Booth</li>
+                    </h3>
+                    <ul>
+                        <li>Offering sportswear and accessories, with all profits from sales directed to support the
+                            event's goals.</li>
+                    </ul>
+                    <h3>
+                        <li>Green Booth</li>
+                    </h3>
+                    <ul>
+                        <li> Selling completely natural supplements and health foods, promoting a healthy lifestyle. All
+                            profits from this booth will be allocated to fundraising.</li>
+                    </ul>
+
+                    <h3>
+                        <li>Photo Booth</li>
+                    </h3>
+                    <ul>
+                        <li>Capture memorable moments with friends and family, with instant prints available for
+                            participants.</li>
+                    </ul>
+                </ol>
+            </div>
+        </div>
+
+
+        <p><a href="index.html">Back to Home</a></p>
+    </div>
+    <button id="backToTop">⬆️ backToTop</button>
+    <footer>
+        <p style="text-align: center;">&copy; 2024 Charity Run. All rights reserved.</p>
+    </footer>
+    <script>
+        // Highlight the current page link
+        const currentLocation = window.location.pathname.split("/").pop();
+        document.querySelectorAll('nav a').forEach(item => {
+            if (item.getAttribute('href') === currentLocation) {
+                item.classList.add('active');
+            }
+        });
+    </script>
+    <script>
+        const backToTopButton = document.getElementById('backToTop');
+        window.onscroll = function () {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        };
+
+        // Sự kiện click vào nút để cuộn lên đầu trang
+        backToTopButton.addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Cuộn mượt mà
+            });
+        });
+    </script>
+</body>

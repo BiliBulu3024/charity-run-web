@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charity Run 2024 - Home Page</title>
+    <!-- Link to Google Fonts for custom typography -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Sixtyfour+Convergence&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+<body>
+<!-- Thông báo hỗ trợ -->
+<div class="help-message" id="helpMessage">Tôi có thể giúp gì cho bạn?</div>
+  
+<!-- Biểu tượng trợ giúp -->
+<div class="help-symbol" id="helpSymbol">
+    <span>?</span>
+    <button class="close-symbol" id="closeSymbol">X</button>
+</div>
+
+<!-- Chatbox cho người dùng -->
+<div class="chatbox" id="chatbox">
+    <div class="chatbox-header" id="chatboxHeader">Chat hỗ trợ</div>
+    <div class="chatbox-body" id="chatboxBody">
+        <p class="bot-message"><strong>Admin:</strong> Chào bạn! Tôi có thể giúp gì cho bạn?</p>
+    </div>
+    <div class="chatbox-footer">
+        <input type="text" id="userInput" placeholder="Nhập tin nhắn...">
+        <button id="sendMessage">Gửi</button>
+    </div>
+</div>
+
+<!-- Giao diện quản lý Admin -->
+<div class="admin-chatbox" id="adminChatbox" style="display:none;">
+    <div class="admin-chatbox-header">
+        <h3>Quản lý câu hỏi</h3>
+    </div>
+    <div class="admin-chatbox-body" id="adminChatboxBody">
+        <!-- Các câu hỏi và trả lời sẽ được hiển thị tại đây -->
+    </div>
+    <div class="admin-chatbox-footer">
+        <input type="text" id="adminReplyInput" placeholder="Nhập câu trả lời...">
+        <button id="sendAdminReply">Trả lời</button>
+    </div>
+</div>
+
+<script src="style.css"></script> 
+<script>
+    // Lấy các phần tử cần thiết
+    const helpMessage = document.getElementById('helpMessage');
+    const helpSymbol = document.getElementById('helpSymbol');
+    const closeSymbol = document.getElementById('closeSymbol');
+    const chatbox = document.getElementById('chatbox');
+    const chatboxBody = document.getElementById('chatboxBody');
+    const userInput = document.getElementById('userInput');
+    const sendMessage = document.getElementById('sendMessage');
+    const adminChatbox = document.getElementById('adminChatbox');
+    const adminChatboxBody = document.getElementById('adminChatboxBody');
+    const adminReplyInput = document.getElementById('adminReplyInput');
+    const sendAdminReply = document.getElementById('sendAdminReply');
+
+    let userMessages = [];  // Mảng lưu trữ các câu hỏi từ người dùng
+
+    // Hiển thị thông báo khi mở trang
+    window.onload = function () {
+        helpMessage.classList.add('show'); // Hiển thị thông báo
+        setTimeout(() => {
+            helpMessage.classList.remove('show'); // Ẩn thông báo sau 5 giây
+        }, 5000);
+    };
+
+    // Tắt biểu tượng trợ giúp
+    closeSymbol.addEventListener('click', () => {
+        helpSymbol.style.display = 'none';
+    });
+
+    // Mở/đóng chatbox
+    helpSymbol.addEventListener('click', () => {
+        chatbox.style.display = chatbox.style.display === 'flex' ? 'none' : 'flex';
+    });
+
+    // Mở giao diện quản lý Admin
+    function openAdminChatbox() {
+        adminChatbox.style.display = 'block';
+    }
+
+    // Gửi tin nhắn từ người dùng
+    sendMessage.addEventListener('click', () => {
+        const message = userInput.value.trim();
+        if (message) {
+            chatboxBody.innerHTML += `<p class="user-message"><strong>User:</strong> ${message}</p>`;
+            userMessages.push(message);  // Lưu câu hỏi vào mảng
+            setTimeout(() => {
+                chatboxBody.innerHTML += `<p class="bot-message"><strong>Admin:</strong> Xin vui lòng chờ trong giây lát. Tôi sẽ kết nối bạn với nhân viên! </p>`;
+                chatboxBody.scrollTop = chatboxBody.scrollHeight;
+            }, 500);
+            userInput.value = '';
+        }
+    });
+
+    // Gửi trả lời từ Admin
+    sendAdminReply.addEventListener('click', () => {
+        const reply = adminReplyInput.value.trim();
+        if (reply && userMessages.length > 0) {
+            const lastUserMessage = userMessages[userMessages.length - 1];  // Lấy câu hỏi mới nhất từ người dùng
+            adminChatboxBody.innerHTML += ` 
+                <div class="message">
+                    <p class="user-message"><strong>User:</strong> ${lastUserMessage}</p>
+                    <p class="bot-message"><strong>Admin:</strong> ${reply}</p>
+                </div>
+            `;
+            adminReplyInput.value = ''; // Xóa ô nhập sau khi trả lời
+            adminChatboxBody.scrollTop = adminChatboxBody.scrollHeight;  // Cuộn xuống dưới cùng
+        }
+    });
+
+    // Tự động mở giao diện Admin khi có câu hỏi mới (cho mục đích demo)
+    setInterval(() => {
+        if (userMessages.length > 0) {
+            openAdminChatbox();
+        }
+    }, 1000);
+</script>
+
+    <header style=" background-image: url('header_backround.jpg'); background-size: cover; height: 400px;">
+        <h1 style="color: rgb(0, 0, 0); text-align: center">
+            <img src="Charity_Run_logo.png" alt="Charity Run Logo"
+                style="max-width: 200px; height: auto; align-items: center;"
+                onclick="window.location.href='index.html'" />
+        </h1>
+        <h1
+            style=" font-family: 'Sixtyfour Convergence', sans-serif; font-size: 40px; line-height: 1.5; text-align: center;">
+            Program Events
+        </h1>
+        <br>
+    </header>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="program.html">Program Events</a>
+        <a href="general-info.html">General Information</a>
+        <a href="participation.html">Participation Information</a>
+        <a href="about-us.html">About Us</a>
+        <a href="inquiry.html">Inquiry</a>
+    </nav>
+
+    <div style="margin: 20px;">
+        <h2>I. Our Events Stories </h2><br>
+        <div style="display: flex; align-items: center;">
+            <div style="flex: 1; padding-right: 20px;">
+                <B><I>Charity Run: A Beacon of Hope and Community Spirit</I></B>
+                <p style="text-align: justify;">Charity Run has been held continuously for 5 years, evolving into one of
+                    the most prominent events in our community. This annual celebration has become a hallmark of
+                    compassion and unity, drawing together individuals from all walks of life who share a common goal:
+                    to make a positive impact in the world around them.</p>
+                <p>Over the years, we have received enthusiastic support from thousands of participants and generous
+                    sponsors, each contributing to the spirit of the event. The excitement that fills the air on race
+                    day is palpable, as families, friends, and colleagues gather to take part in this meaningful
+                    experience. People of all ages join in, from seasoned runners to first-time participants, all united
+                    by the desire to support those in need.</p>
+                <p>The event not only brings joy to those involved but also creates profound, lasting changes in many
+                    lives. Each registration fee and donation directly translates into tangible benefits for the
+                    community. We have witnessed families receiving crucial support to rebuild their homes after
+                    disasters, ensuring they have a safe place to live. Scholarships funded by the proceeds have opened
+                    doors to education for children who might otherwise be unable to pursue their dreams.</p>
+            </div>
+            <div>
+                <img src="Our_Stories.jpg" alt="Charity Run Logo" style="max-width: 1000px; height: 200px;">
+            </div>
+        </div>
+        <h2>II. Charity Run 2024: "Run to Rebuild"</h2>
+        <p>We are living in challenging times, especially for the Nủ village, which has suffered heavy consequences
+            after Typhoon Yagi. On September 10, 2024, the storm caused landslides and swept away the village, taking
+            not only homes but also the dreams and hopes of the local people. Tragically, the storm claimed the lives of
+            52 people and injured hundreds more, with these figures updated as of 3 PM on September 15, 2024.</p>
+        <img src="langnu2.jpg" alt="Nủ village seen from above before being landslide"
+            style="max-width: 1000px; height: 200px;">
+        <img src="langnu21.jpg" alt="Nủ village after a landslide" style="max-width: 1000px; height: 200px;">
+        <img src="langnu1.jpg" alt="Nủ village after a landslide" style="max-width: 1000px; height: 200px;">
+        <img src="langnu3.jpg" alt="Authorities launched a search operation"
+            style="max-width: 1000px; height: 200px;"><br>
+        <p>Amid these difficulties, we must not forget that love and solidarity always exist. This is why we are
+            organizing Charity Run 2024—an event that is not just a race but also a journey of compassion, where every
+            step you take will help restore the lives of the people in Nủ village.</p>
+        <h3 align="center"> <span class="highlight">Run for Love - Charity Run 2024</span></h3>
+        <h2>III. Donation Fund for 5 Years </h2>
+        <!-- Create table of fund -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Year</th>
+                    <th>Number of Participants</th>
+                    <th>Donation Amount (USD)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2020</td>
+                    <td>500</td>
+                    <td>100,000</td>
+                </tr>
+                <tr>
+                    <td>2021</td>
+                    <td>800</td>
+                    <td>200,000</td>
+                </tr>
+                <tr>
+                    <td>2022</td>
+                    <td>1,200</td>
+                    <td>250,000</td>
+                </tr>
+                <tr>
+                    <td>2023</td>
+                    <td>1,800</td>
+                    <td>300,000</td>
+                </tr>
+                <tr>
+                    <td>2024</td>
+                    <td>2,500</td>
+                    <td>350,000</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #c4c4c4" ; colspan="2"><strong>Total Donation Amount</strong></td>
+                    <td><strong>1,200,000</strong></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>
+            Let’s take a look at the impressive numbers from the Charity Run over the past 5 years!
+            This event is not just a race; it has become a meaningful tradition in our community.
+        </p>
+
+        <p>
+            <strong>In 2020</strong>, with only 500 participants, we raised $100,000.<br>
+            <strong>In 2021</strong>, the number of participants increased to 800, and the fundraising also followed
+            suit, reaching $200,000.<br>
+            <strong>In 2022</strong>, with 1,200 participants, we set a new record with $250,000.<br>
+            <strong>In 2023</strong>, the event attracted 1,800 participants, and we raised $300,000.<br>
+            Notably, <strong>2024</strong> promises to be a breakout year with 2,500 participants, aiming for a
+            fundraising total of $350,000.
+        </p>
+
+        <p>
+            In total, we have raised <span class="highlight">$1,200,000 USD</span> over the past 5 years—an incredible
+            figure!
+        </p>
+
+        <h2>Why Should You Join?</h2>
+        <p>
+            The Charity Run 2024 event not only provides an opportunity for you to showcase your athletic spirit but
+            also serves as a chance to make a difference together.
+            Every step you take will help restore the lives of the villagers in Nủ after Typhoon Yagi.
+        </p>
+        <p>
+            Become part of this meaningful journey! Every participant is a vital piece of the larger picture of
+            compassion and solidarity.
+        </p>
+
+        <p>
+            Don’t miss the chance to be part of an amazing event that everyone wants to register for.
+            Let’s run for the future and hope! <strong><a href="inquiry.html"
+                    style="color: #4A90E2; font-weight: bold; margin: 0 10px;" onmouseover="this.style.color='#FF6347';"
+                    onmouseout="this.style.color='#4A90E2';">Sign up </a></strong> today to be part of Charity Run
+            2024!❤️
+        </p>
+    </div>
+    <button id="backToTop">⬆️ backToTop</button>
+    <footer>
+        <p style="text-align: center;">&copy; 2024 Charity Run. All rights reserved.</p>
+    </footer>
+    <script>
+        // Highlight the current page link
+        const currentLocation = window.location.pathname.split("/").pop();
+        document.querySelectorAll('nav a').forEach(item => {
+            if (item.getAttribute('href') === currentLocation) {
+                item.classList.add('active');
+            }
+        });
+
+    </script>
+    <script>
+        const backToTopButton = document.getElementById('backToTop');
+        window.onscroll = function () {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        };
+
+        // Sự kiện click vào nút để cuộn lên đầu trang
+        backToTopButton.addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Cuộn mượt mà
+            });
+        });
+    </script>
+
+</body>
+
+</html>
